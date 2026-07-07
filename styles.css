@@ -1,0 +1,331 @@
+:root{--paper:#f3f0e8;--ink:#171a1d;--muted:#6d716d;--teal:#0e7c78;--blue:#154c79;--line:#c9c5ba;--desk:#d7d4cb;--ease:cubic-bezier(.22,.74,.18,1);--page-ratio:1.414}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--desk);color:var(--ink)}body{font-family:"PingFang SC","Microsoft YaHei",sans-serif;overflow:hidden}.reader-bar{height:56px;padding:0 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(23,26,29,.18);background:rgba(243,240,232,.86);backdrop-filter:blur(16px);position:relative;z-index:50}.wordmark,.reader-actions button,.reader-actions a{font:600 12px/1 inherit;letter-spacing:.08em;color:var(--ink);background:none;border:0;text-decoration:none;cursor:pointer}.reader-actions{display:flex;align-items:center;gap:22px}.reader-actions button:hover,.reader-actions a:hover{color:var(--teal)}.reader-shell{height:calc(100vh - 112px);display:grid;place-items:center;padding:18px 60px 12px;position:relative}.book-wrap{height:100%;width:100%;display:grid;place-items:center;perspective:1800px}.book{position:relative;height:min(100%,780px);aspect-ratio:1/1.414;filter:drop-shadow(0 28px 38px rgba(26,30,30,.22))}.page{position:absolute;inset:0;background:var(--paper);padding:clamp(32px,5.6vh,58px);overflow:hidden;opacity:0;transform:translateX(7%) rotateY(-5deg) scale(.985);transform-origin:left center;transition:opacity .25s ease,transform .58s var(--ease);pointer-events:none;border:1px solid rgba(23,26,29,.08)}.page::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(27,31,30,.055),transparent 8%,transparent 92%,rgba(255,255,255,.35))}.page.active{opacity:1;transform:none;pointer-events:auto;z-index:2}.page.leaving-prev{opacity:0;transform:translateX(-9%) rotateY(10deg) scale(.985)}.page h2{font-family:"Songti SC","STSong",serif;font-size:clamp(34px,5.3vh,56px);line-height:1.12;letter-spacing:-.045em;margin:26px 0 34px;text-wrap:balance}.page-kicker{font:700 11px/1.3 "Avenir Next",sans-serif;letter-spacing:.16em;color:var(--teal);border-top:2px solid currentColor;padding-top:10px;width:max-content}.page-number{position:absolute;right:30px;bottom:24px;font:600 12px/1 "Avenir Next",sans-serif;color:var(--muted)}.cover{background:var(--ink);color:var(--paper);display:flex;flex-direction:column;justify-content:space-between}.cover-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(243,240,232,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(243,240,232,.06) 1px,transparent 1px);background-size:12.5% 8.33%}.cover-top,.cover-foot{display:flex;justify-content:space-between;position:relative;font:600 10px/1 "Avenir Next",sans-serif;letter-spacing:.14em}.cover-copy{position:relative;margin-top:auto;margin-bottom:auto}.eyebrow{font:700 11px/1.4 "Avenir Next",sans-serif;letter-spacing:.17em;color:#75c4ba}.cover h1{font-family:"Songti SC","STSong",serif;font-size:clamp(44px,6.8vh,72px);line-height:1.09;letter-spacing:-.055em;margin:24px 0}.cover-deck{font-size:18px;letter-spacing:.06em}.profile-layout{display:grid;grid-template-columns:1.3fr .72fr;gap:42px;align-items:center;height:calc(100% - 60px)}.profile h2{font-size:64px;margin-bottom:20px}.display-line{font-family:"Songti SC","STSong",serif;font-size:22px;line-height:1.6;margin:0 0 34px}.portrait{margin:0}.portrait img,.end-photo img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;filter:saturate(.86) contrast(1.02)}figcaption{font-size:11px;color:var(--muted);margin-top:8px}.capability-list{border-top:1px solid var(--line)}.capability-list div{display:grid;grid-template-columns:90px 1fr;gap:18px;padding:14px 0;border-bottom:1px solid var(--line);font-size:13px}.capability-list span{color:var(--muted)}.fit-grid{display:grid;grid-template-columns:.78fr 1.22fr;border-top:2px solid var(--ink);font-size:14px}.fit-grid>div{padding:15px 10px;border-bottom:1px solid var(--line)}.fit-grid>div:nth-child(odd){font-weight:650}.fit-head{font-size:11px!important;letter-spacing:.1em;color:var(--muted)}.note{margin-top:24px;padding:16px 0;border-top:1px solid var(--ink);font-size:12px;line-height:1.65;color:var(--muted)}.dark-page{background:#171a1d;color:var(--paper)}.dark-page .page-kicker{color:#75c4ba}.case-index{font:700 11px/1 "Avenir Next",sans-serif;letter-spacing:.17em;margin-top:58px}.dark-page h2,.blue-page h2{font-size:56px;margin-top:20px}.stat-ribbon{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(243,240,232,.3);border-bottom:1px solid rgba(243,240,232,.3);margin-top:60px}.stat-ribbon div{padding:20px 10px}.stat-ribbon div+div{border-left:1px solid rgba(243,240,232,.3)}.stat-ribbon strong{display:block;font:500 34px/1 "Avenir Next",sans-serif}.stat-ribbon span{font-size:11px;color:#bfc3bd}.case-role{position:absolute;left:58px;bottom:48px;font-size:12px;color:#bfc3bd}.research-path{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}.research-path div{padding:20px 12px;min-height:158px}.research-path div+div{border-left:1px solid var(--line)}.research-path span{font:600 11px/1 "Avenir Next",sans-serif;color:var(--teal)}.research-path b{display:block;font-size:18px;margin:18px 0 10px}.research-path p{font-size:12px;line-height:1.7;color:var(--muted)}blockquote{font:20px/1.6 "Songti SC","STSong",serif;margin:34px 0 10px;padding-left:18px;border-left:3px solid var(--teal)}.small-source{font-size:11px;line-height:1.6;color:var(--muted)}.insight-layout{display:grid;grid-template-columns:.8fr 1.2fr;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}.big-stat{padding:28px 22px 28px 0}.big-stat strong{font:500 60px/1 "Avenir Next",sans-serif;color:var(--teal)}.big-stat span{display:block;font-size:12px;margin-top:14px}.insight-copy{padding:22px;border-left:1px solid var(--line);font-size:14px;line-height:1.75}.placeholder{margin-top:28px;height:120px;border:1px dashed #9d9a91;display:grid;place-items:center;color:var(--muted);font:14px/1.6 "Songti SC",serif}.placeholder span{font:700 10px/1 "Avenir Next",sans-serif;letter-spacing:.12em}.strategy-stack{border-top:2px solid var(--ink)}.strategy-stack>div{display:grid;grid-template-columns:70px 180px 1fr;gap:18px;align-items:baseline;padding:22px 0;border-bottom:1px solid var(--line)}.strategy-stack span{font:700 11px/1 "Avenir Next",sans-serif;color:var(--teal)}.strategy-stack h3{margin:0;font:24px/1.2 "Songti SC",serif}.strategy-stack p{margin:0;font-size:13px;line-height:1.7;color:var(--muted)}.blue-page{background:#154c79;color:white}.blue-page .page-kicker{color:#9ad1c7}.problem-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.28);margin-top:58px}.problem-metrics div{background:#154c79;padding:18px}.problem-metrics strong{display:block;font:500 27px/1 "Avenir Next",sans-serif}.problem-metrics span{font-size:10px;color:#d6e5ee}.solution-layout{display:grid;grid-template-columns:.72fr 1.28fr;gap:24px;align-items:center}.solution-layout img{width:100%;border:1px solid var(--line)}.filter-demo{display:flex;flex-wrap:wrap;gap:8px}.filter-demo span{font-size:11px;border:1px solid var(--ink);padding:7px 9px}.filter-demo strong{display:block;width:100%;font:22px/1.55 "Songti SC",serif;margin-top:16px}.caption{font-size:11px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}.flow-preview{height:280px;border:1px solid var(--line);overflow:hidden;background:white}.flow-preview img{width:100%;height:100%;object-fit:contain}.test-strip{display:grid;grid-template-columns:1.6fr .65fr .2fr .65fr .65fr;align-items:center;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);margin-top:20px}.test-strip>div{padding:12px 8px}.test-strip b,.test-strip strong{display:block;font-size:16px}.test-strip span{display:block;font-size:9px;line-height:1.4;color:var(--muted);margin-top:5px}.test-strip .arrow{text-align:center}.governance-rule{display:flex;align-items:center;justify-content:space-between;border:1px solid var(--ink);padding:20px 16px;font:600 13px/1.2 inherit}.governance-rule i{font-style:normal;color:var(--teal)}.governance-metrics{display:grid;grid-template-columns:repeat(3,1fr);margin-top:32px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}.governance-metrics div{padding:26px 12px}.governance-metrics div+div{border-left:1px solid var(--line)}.governance-metrics strong{font:500 32px/1 "Avenir Next",sans-serif}.governance-metrics span{display:block;font-size:10px;color:var(--muted);margin-top:8px}.end-layout{display:grid;grid-template-columns:1.25fr .75fr;gap:46px;align-items:center;height:calc(100% - 40px)}.end-page h2{font-size:54px}.end-photo{margin:0}.contact-lines{display:flex;flex-direction:column;gap:7px;font-size:13px}.contact-lines a{color:inherit;text-decoration:none}.resume-button{display:inline-block;margin-top:30px;background:var(--teal);color:white;text-decoration:none;padding:13px 20px;font-size:12px;font-weight:650}.toc{position:fixed;top:56px;left:0;bottom:56px;width:min(360px,88vw);background:#171a1d;color:var(--paper);z-index:40;transform:translateX(-102%);transition:transform .35s var(--ease);padding:28px;box-shadow:20px 0 45px rgba(0,0,0,.22)}.toc.open{transform:none}.toc-head{display:flex;justify-content:space-between;border-bottom:1px solid #51534f;padding-bottom:16px;font:700 11px/1 "Avenir Next",sans-serif;letter-spacing:.14em}.toc-head button{background:none;border:0;color:#bfc3bd;cursor:pointer}.toc ol{list-style:none;padding:18px 0;margin:0}.toc li button{width:100%;background:none;border:0;color:var(--paper);display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid #343633;cursor:pointer;text-align:left}.toc li button:hover{color:#75c4ba}.reader-controls{height:56px;display:flex;justify-content:center;align-items:center;gap:24px;background:rgba(243,240,232,.86);border-top:1px solid rgba(23,26,29,.18);backdrop-filter:blur(16px)}.reader-controls button{width:36px;height:36px;border:1px solid rgba(23,26,29,.25);background:transparent;cursor:pointer;font-size:18px}.reader-controls button:disabled{opacity:.3;cursor:default}.progress{display:flex;align-items:center;gap:12px;font:600 11px/1 "Avenir Next",sans-serif}.progress>div{width:120px;height:2px;background:#b7b3aa}.progress i{display:block;height:100%;width:8.33%;background:var(--teal);transition:width .35s var(--ease)}body.reduce-motion *{transition-duration:.01ms!important;animation-duration:.01ms!important}
+@media(max-width:760px){body{overflow:auto}.reader-bar{padding:0 14px}.wordmark{font-size:10px}.reader-actions{gap:12px}.reader-actions button:nth-child(3){display:none}.reader-shell{height:calc(100svh - 112px);padding:12px}.book{width:min(100%,560px);height:auto;aspect-ratio:1/1.414}.page{padding:28px}.page h2{font-size:32px;margin:20px 0 24px}.cover h1{font-size:42px}.profile-layout,.solution-layout,.end-layout{grid-template-columns:1fr}.portrait,.end-photo{display:none}.fit-grid{font-size:11px}.research-path{grid-template-columns:1fr 1fr}.research-path div:nth-child(3){border-left:0}.insight-layout{grid-template-columns:1fr}.big-stat strong{font-size:48px}.strategy-stack>div{grid-template-columns:48px 1fr}.strategy-stack p{grid-column:2}.dark-page h2,.blue-page h2,.end-page h2{font-size:38px}.stat-ribbon strong{font-size:25px}.problem-metrics{grid-template-columns:1fr}.problem-metrics div{padding:11px}.solution-layout img{max-height:260px;object-fit:contain}.test-strip{grid-template-columns:1fr 1fr 20px 1fr}.test-strip>div:last-child{display:none}.governance-rule{font-size:10px;padding:14px 8px}.governance-metrics strong{font-size:22px}}
+
+/* v0 height-fit refinement */
+.profile h2{font-size:52px;margin:18px 0 14px}
+.display-line{font-size:18px;line-height:1.55;margin:0 0 22px}
+.capability-list div{grid-template-columns:78px 1fr;gap:14px;padding:9px 0;font-size:11px}
+[data-label="邮闲·流程与验证"]{padding:32px 40px}
+[data-label="邮闲·流程与验证"] h2{font-size:32px;margin:16px 0 20px}
+[data-label="邮闲·流程与验证"] .flow-preview{height:220px}
+[data-label="邮闲·流程与验证"] .test-strip{margin-top:12px}
+[data-label="邮闲·流程与验证"] .small-source{font-size:9px;margin-top:8px}
+@media(max-width:760px){
+  .reader-actions{gap:9px}.reader-actions a,.reader-actions button{font-size:11px}
+  [data-label="邮闲·流程与验证"]{padding:22px 28px}
+  [data-label="邮闲·流程与验证"] h2{font-size:27px;margin:12px 0 16px}
+  [data-label="邮闲·流程与验证"] .flow-preview{height:190px}
+  [data-label="邮闲·流程与验证"] .test-strip{margin-top:10px}
+  [data-label="邮闲·流程与验证"] .test-strip>div{padding:8px 6px}
+  [data-label="邮闲·流程与验证"] .test-strip b,[data-label="邮闲·流程与验证"] .test-strip strong{font-size:13px}
+  [data-label="邮闲·流程与验证"] .small-source{font-size:7px;line-height:1.35;margin-top:5px}
+}
+
+/* 2026-07 layout refinement: resolve spread-page collisions and preserve full evidence charts */
+[data-label="AI问卷·问题"] .case-role{bottom:28px;max-width:calc(100% - 96px);line-height:1.55}
+
+@media(min-width:761px){
+  [data-label="AI问卷·洞察"] h2{font-size:36px;line-height:1.12;margin:16px 0 16px}
+  [data-label="AI问卷·洞察"] .insight-layout{max-height:none}
+  [data-label="AI问卷·洞察"] .big-stat{padding:15px 16px 12px 0}
+  [data-label="AI问卷·洞察"] .big-stat strong{font-size:48px}
+  [data-label="AI问卷·洞察"] .insight-copy{padding:12px 0 5px 18px;font-size:11px;line-height:1.5}
+  [data-label="AI问卷·洞察"] .insight-copy p{margin:0 0 7px}
+  [data-label="AI问卷·洞察"] .research-figure{height:258px;margin-top:14px}
+  [data-label="AI问卷·洞察"] .research-figure img{width:100%;height:224px;margin:0;transform:none}
+
+  [data-label="AI问卷·策略"]{padding-bottom:34px}
+  [data-label="AI问卷·策略"] h2{font-size:34px;line-height:1.12;margin:15px 0 16px}
+  [data-label="AI问卷·策略"] .strategy-stack{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--ink);border-bottom:1px solid var(--line)}
+  [data-label="AI问卷·策略"] .strategy-stack>div{display:block;min-width:0;padding:11px 12px 12px 0;border-bottom:0}
+  [data-label="AI问卷·策略"] .strategy-stack>div+div{padding-left:12px;border-left:1px solid var(--line)}
+  [data-label="AI问卷·策略"] .strategy-stack span{display:block;margin-bottom:8px}
+  [data-label="AI问卷·策略"] .strategy-stack h3{font-size:16px;line-height:1.25;margin-bottom:6px}
+  [data-label="AI问卷·策略"] .strategy-stack p{font-size:9px;line-height:1.45}
+  [data-label="AI问卷·策略"] .strategy-proof{height:300px;margin:12px 0 0}
+  [data-label="AI问卷·策略"] .strategy-proof img{display:block;width:100%;height:268px;margin:0;object-fit:contain;object-position:center;transform:none;border:0;background:transparent}
+  [data-label="AI问卷·策略"] .strategy-proof figcaption{font-size:11px;line-height:1.4;margin-top:5px}
+}
+
+@media(max-width:760px){
+  [data-label="AI问卷·问题"] .case-role{left:28px;bottom:25px;max-width:calc(100% - 76px);font-size:10px}
+  [data-label="AI问卷·洞察"] h2{font-size:26px;margin-bottom:10px}
+  [data-label="AI问卷·策略"] .strategy-proof img{width:100%;margin:0;transform:none;object-fit:contain}
+}
+
+/* Final proportion refinements */
+@media(min-width:761px){
+  .cover-copy{position:absolute;top:50%;left:clamp(30px,4.6vh,50px);right:clamp(30px,4.6vh,50px);margin:0;transform:translateY(-50%)}
+  .cover-top{position:absolute;top:clamp(30px,4.6vh,50px);left:clamp(30px,4.6vh,50px);right:clamp(30px,4.6vh,50px)}
+  .cover-foot{position:absolute;bottom:clamp(30px,4.6vh,50px);left:clamp(30px,4.6vh,50px);right:clamp(30px,4.6vh,50px)}
+}
+
+[data-label="AI问卷·研究路径"] h2{font-size:42px;line-height:1.12;margin:18px 0 20px}
+[data-label="AI问卷·研究路径"] .research-path span{font-size:12px}
+[data-label="AI问卷·研究路径"] .research-path b{font-size:18px;margin:11px 0 7px}
+[data-label="AI问卷·研究路径"] .research-path p{font-size:12px;line-height:1.5}
+[data-label="AI问卷·研究路径"] .method-proof{height:292px;margin-top:12px}
+[data-label="AI问卷·研究路径"] .method-proof img{height:258px;mix-blend-mode:multiply}
+[data-label="AI问卷·研究路径"] .method-proof figcaption{font-size:12px}
+[data-label="AI问卷·研究路径"] blockquote{font-size:15px;margin-top:5px}
+
+[data-label="AI问卷·洞察"] .research-figure{height:250px;margin-top:9px;background:transparent}
+[data-label="AI问卷·洞察"] .research-figure img{width:108%;height:220px;margin-left:-4%;object-fit:contain;transform:scale(1.06);mix-blend-mode:multiply;background:transparent}
+[data-label="AI问卷·洞察"] .research-figure figcaption{font-size:13px;margin-top:6px}
+
+[data-label="AI问卷·策略"] .strategy-stack>div{grid-template-columns:70px 180px 1fr;gap:18px;padding:13px 0}
+[data-label="AI问卷·策略"] .strategy-stack h3{font-size:19px}
+[data-label="AI问卷·策略"] .strategy-stack p{font-size:11px;line-height:1.55}
+[data-label="AI问卷·策略"] .strategy-proof{height:262px;margin-top:10px;background:transparent}
+[data-label="AI问卷·策略"] .strategy-proof img{width:108%;height:230px;margin-left:-4%;object-fit:contain;transform:scale(1.06);mix-blend-mode:multiply;background:transparent}
+[data-label="AI问卷·策略"] .strategy-proof figcaption{font-size:12px;margin-top:5px}
+
+@media(max-width:760px){
+  .cover-copy{margin:auto 0}
+  [data-label="AI问卷·研究路径"] h2{font-size:29px}
+  [data-label="AI问卷·研究路径"] .research-path b{font-size:13px}
+  [data-label="AI问卷·研究路径"] .research-path p{font-size:8px}
+  [data-label="AI问卷·研究路径"] .method-proof{height:122px}
+  [data-label="AI问卷·研究路径"] .method-proof img{height:98px}
+  [data-label="AI问卷·洞察"] .research-figure{height:145px}
+  [data-label="AI问卷·洞察"] .research-figure img{height:118px}
+  [data-label="AI问卷·策略"] .strategy-stack>div{grid-template-columns:36px 92px 1fr;gap:6px;padding:5px 0}
+  [data-label="AI问卷·策略"] .strategy-stack h3{font-size:12px}
+  [data-label="AI问卷·策略"] .strategy-stack p{font-size:7px}
+  [data-label="AI问卷·策略"] .strategy-proof{height:150px}
+  [data-label="AI问卷·策略"] .strategy-proof img{height:124px}
+}
+
+/* Readability pass: research figures and uncropped prototype evidence */
+[data-label="AI问卷·研究路径"] h2{font-size:40px;margin:18px 0 22px}
+[data-label="AI问卷·研究路径"] .research-path div{min-height:124px;padding:14px 10px}
+[data-label="AI问卷·研究路径"] .research-path b{font-size:15px;margin:10px 0 6px}
+[data-label="AI问卷·研究路径"] .research-path p{font-size:10px;line-height:1.5}
+[data-label="AI问卷·研究路径"] .method-proof{position:relative;right:auto;bottom:auto;width:100%;height:246px;margin:16px 0 0;overflow:hidden;background:transparent;border:0}
+[data-label="AI问卷·研究路径"] .method-proof img{display:block;width:100%;height:216px;margin:0;object-fit:contain;object-position:center;border:0;transform:none}
+[data-label="AI问卷·研究路径"] .method-proof figcaption{font-size:11px;line-height:1.45;margin-top:6px;color:var(--muted)}
+[data-label="AI问卷·研究路径"] blockquote{font-size:14px;line-height:1.4;margin:8px 0 0;padding-left:12px}
+
+[data-label="AI问卷·洞察"] h2{font-size:38px;margin:18px 0 22px}
+[data-label="AI问卷·洞察"] .insight-layout{max-height:none;border-top:1px solid var(--ink);border-bottom:0;align-items:stretch}
+[data-label="AI问卷·洞察"] .big-stat{padding:18px 18px 12px 0}
+[data-label="AI问卷·洞察"] .big-stat strong{font-size:52px}
+[data-label="AI问卷·洞察"] .insight-copy{padding:16px 0 8px 20px;border-left:1px solid var(--line);font-size:12px;line-height:1.6}
+[data-label="AI问卷·洞察"] .insight-copy p{margin:0 0 10px}
+[data-label="AI问卷·洞察"] .insight-copy b{font-size:13px;white-space:nowrap}
+[data-label="AI问卷·洞察"] .research-figure{height:238px;margin:12px 0 0;overflow:hidden;border:0}
+[data-label="AI问卷·洞察"] .research-figure img{display:block;width:100%;height:206px;margin:0;object-fit:contain;object-position:center;border:0;transform:none}
+[data-label="AI问卷·洞察"] .research-figure figcaption{font-size:13px;line-height:1.45;margin-top:8px;color:var(--muted)}
+
+[data-label="AI问卷·策略"] h2{font-size:38px;margin:18px 0 20px}
+[data-label="AI问卷·策略"] .strategy-stack>div{grid-template-columns:56px 145px 1fr;gap:12px;padding:9px 0}
+[data-label="AI问卷·策略"] .strategy-stack h3{font-size:17px}
+[data-label="AI问卷·策略"] .strategy-stack p{font-size:9px;line-height:1.45}
+[data-label="AI问卷·策略"] .strategy-proof{height:250px;margin:12px 0 0;overflow:hidden;border:0}
+[data-label="AI问卷·策略"] .strategy-proof img{display:block;width:100%;height:218px;margin:0;object-fit:contain;object-position:center;border:0;transform:none}
+[data-label="AI问卷·策略"] .strategy-proof figcaption{font-size:12px;line-height:1.45;margin-top:7px;color:var(--muted)}
+
+[data-label="邮闲·方案"] h2{font-size:40px;margin:18px 0 20px}
+[data-label="邮闲·方案"] .prototype-strip{grid-template-columns:1fr 1fr;grid-template-rows:190px 112px;gap:10px;padding-top:10px}
+[data-label="邮闲·方案"] .prototype-strip figure{display:flex;flex-direction:column;min-height:0}
+[data-label="邮闲·方案"] .prototype-strip figure:nth-child(2){grid-column:1 / -1;grid-row:1;order:-1}
+[data-label="邮闲·方案"] .prototype-strip img{flex:1;width:100%;height:100%;min-height:0;object-fit:contain;object-position:center;background:transparent;border:0}
+[data-label="邮闲·方案"] .prototype-strip figcaption{font-size:9px;margin-top:3px}
+[data-label="邮闲·方案"] .filter-summary{margin-top:10px;padding:10px 0}
+[data-label="邮闲·方案"] .filter-summary strong{font-size:16px}
+
+/* Stronger paper turn: visible curl, lift and moving shadow */
+@media(min-width:761px){
+  .turn-sheet{backface-visibility:visible;overflow:hidden;will-change:transform,filter;box-shadow:none}
+  .turn-sheet::before{z-index:60;background:linear-gradient(90deg,rgba(255,255,255,.08),rgba(0,0,0,.28) 78%,rgba(0,0,0,.48));mix-blend-mode:multiply}
+  .turn-sheet::after{content:"";position:absolute;inset:0;z-index:61;background:radial-gradient(ellipse at center,transparent 34%,rgba(255,255,255,.18) 68%,rgba(0,0,0,.22) 100%);pointer-events:none}
+  .turn-sheet.turn-next.turning{animation:pageTurnNext .92s cubic-bezier(.18,.7,.12,1) forwards;transition:none}
+  .turn-sheet.turn-prev.turning{animation:pageTurnPrev .92s cubic-bezier(.18,.7,.12,1) forwards;transition:none}
+  @keyframes pageTurnNext{
+    0%{transform:perspective(1800px) rotateY(0) translateZ(0);filter:drop-shadow(0 0 0 rgba(0,0,0,0)) brightness(1)}
+    45%{transform:perspective(1800px) rotateY(-82deg) translateZ(70px) skewY(-1.4deg);filter:drop-shadow(-34px 18px 24px rgba(0,0,0,.34)) brightness(.92)}
+    65%{transform:perspective(1800px) rotateY(-118deg) translateZ(50px) skewY(1deg);filter:drop-shadow(-24px 12px 18px rgba(0,0,0,.28)) brightness(.96)}
+    100%{transform:perspective(1800px) rotateY(-180deg) translateZ(0);filter:drop-shadow(0 0 0 rgba(0,0,0,0)) brightness(1)}
+  }
+  @keyframes pageTurnPrev{
+    0%{transform:perspective(1800px) rotateY(0) translateZ(0);filter:drop-shadow(0 0 0 rgba(0,0,0,0)) brightness(1)}
+    45%{transform:perspective(1800px) rotateY(82deg) translateZ(70px) skewY(1.4deg);filter:drop-shadow(34px 18px 24px rgba(0,0,0,.34)) brightness(.92)}
+    65%{transform:perspective(1800px) rotateY(118deg) translateZ(50px) skewY(-1deg);filter:drop-shadow(24px 12px 18px rgba(0,0,0,.28)) brightness(.96)}
+    100%{transform:perspective(1800px) rotateY(180deg) translateZ(0);filter:drop-shadow(0 0 0 rgba(0,0,0,0)) brightness(1)}
+  }
+}
+
+@media(max-width:760px){
+  [data-label="AI问卷·研究路径"]{padding:24px 28px}
+  [data-label="AI问卷·研究路径"] h2{font-size:29px;margin:12px 0 14px}
+  [data-label="AI问卷·研究路径"] .research-path div{min-height:82px;padding:7px 8px}
+  [data-label="AI问卷·研究路径"] .research-path b{font-size:13px;margin:5px 0 3px}
+  [data-label="AI问卷·研究路径"] .research-path p{font-size:8px;line-height:1.35}
+  [data-label="AI问卷·研究路径"] .method-proof{height:122px;margin-top:8px}
+  [data-label="AI问卷·研究路径"] .method-proof img{height:98px}
+  [data-label="AI问卷·研究路径"] .method-proof figcaption{font-size:8px;margin-top:3px}
+  [data-label="AI问卷·研究路径"] blockquote{display:none}
+  [data-label="AI问卷·洞察"]{padding:24px 28px}
+  [data-label="AI问卷·洞察"] h2{font-size:28px;margin:12px 0 14px}
+  [data-label="AI问卷·洞察"] .big-stat{padding:10px 8px 8px 0}
+  [data-label="AI问卷·洞察"] .big-stat strong{font-size:38px}
+  [data-label="AI问卷·洞察"] .insight-copy{padding:8px 0 4px 10px;font-size:9px}
+  [data-label="AI问卷·洞察"] .insight-copy p{margin-bottom:5px}
+  [data-label="AI问卷·洞察"] .insight-copy b{font-size:10px}
+  [data-label="AI问卷·洞察"] .research-figure{height:145px;margin-top:7px}
+  [data-label="AI问卷·洞察"] .research-figure img{height:118px}
+  [data-label="AI问卷·洞察"] .research-figure figcaption{font-size:8px;margin-top:3px}
+  [data-label="AI问卷·策略"]{padding:24px 28px}
+  [data-label="AI问卷·策略"] h2{font-size:28px;margin:12px 0 12px}
+  [data-label="AI问卷·策略"] .strategy-stack>div{grid-template-columns:36px 92px 1fr;gap:6px;padding:5px 0}
+  [data-label="AI问卷·策略"] .strategy-stack h3{font-size:12px}
+  [data-label="AI问卷·策略"] .strategy-stack p{font-size:7px}
+  [data-label="AI问卷·策略"] .strategy-proof{height:150px;margin-top:7px}
+  [data-label="AI问卷·策略"] .strategy-proof img{height:124px}
+  [data-label="AI问卷·策略"] .strategy-proof figcaption{font-size:8px;margin-top:3px}
+  [data-label="邮闲·方案"] .prototype-strip{grid-template-rows:150px 92px}
+}
+
+/* Issuu-style spread reader */
+@media(min-width:761px){
+  .book{height:min(100%,720px);aspect-ratio:2/1.414;filter:drop-shadow(0 30px 42px rgba(26,30,30,.26));transform-style:preserve-3d}
+  .book::before{content:"";position:absolute;inset:7px -5px -7px;border:1px solid rgba(23,26,29,.16);background:#dedbd2;z-index:-2;box-shadow:0 3px 0 #c7c3b9,0 6px 0 #e7e3da}
+  .book::after{content:"";position:absolute;top:0;bottom:0;left:50%;width:18px;transform:translateX(-50%);z-index:12;pointer-events:none;background:linear-gradient(90deg,transparent,rgba(17,20,21,.18) 42%,rgba(255,255,255,.2) 52%,transparent)}
+  .page{display:none;position:absolute;top:0;bottom:0;width:50%;height:100%;inset-block:0;padding:clamp(30px,4.6vh,50px);opacity:1;transform:none;transition:none}
+  .page.active{display:block;opacity:1;transform:none;pointer-events:auto}
+  .page.active-left{left:0;right:auto;border-right:0}
+  .page.active-right{left:50%;right:auto;border-left:0}
+  .page.active-single{left:25%;right:auto}
+  .cover-view::after{display:none}
+  .cover-view .page.active-single{box-shadow:inset -12px 0 20px rgba(0,0,0,.22)}
+  .page.active-left::after{background:linear-gradient(90deg,rgba(255,255,255,.18),transparent 87%,rgba(27,31,30,.11))}
+  .page.active-right::after{background:linear-gradient(90deg,rgba(27,31,30,.11),transparent 13%,rgba(255,255,255,.18))}
+  .turn-sheet{display:block;position:absolute;top:0;bottom:0;width:50%;height:100%;z-index:25;backface-visibility:hidden;transform-style:preserve-3d;pointer-events:none;box-shadow:0 8px 28px rgba(0,0,0,.22)}
+  .turn-sheet::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 40%,rgba(0,0,0,.18));opacity:0;transition:opacity .35s ease}
+  .turn-sheet.turn-next{left:50%;transform-origin:left center;transform:rotateY(0deg)}
+  .turn-sheet.turn-next.turning{transform:rotateY(-180deg);transition:transform .72s cubic-bezier(.2,.68,.15,1)}
+  .turn-sheet.turn-prev{left:0;transform-origin:right center;transform:rotateY(0deg)}
+  .turn-sheet.turn-prev.turning{transform:rotateY(180deg);transition:transform .72s cubic-bezier(.2,.68,.15,1)}
+  .turn-sheet.turning::before{opacity:1}
+  .page-edge{display:block;position:absolute;top:0;bottom:0;width:8%;z-index:35;border:0;background:transparent;cursor:pointer}
+  .page-edge::after{content:"";position:absolute;top:50%;width:12px;height:42px;transform:translateY(-50%);opacity:0;transition:opacity .2s ease,transform .2s ease;background:rgba(23,26,29,.1)}
+  .page-edge:hover::after{opacity:1}
+  .page-edge-left{left:0}.page-edge-left::after{left:0;border-radius:0 12px 12px 0}
+  .page-edge-right{right:0}.page-edge-right::after{right:0;border-radius:12px 0 0 12px}
+  .page-edge:disabled{display:none}
+}
+
+.method-proof{position:absolute;right:44px;bottom:46px;width:43%;height:115px;object-fit:contain;background:#fff;border:1px solid var(--line)}
+.research-figure{margin:20px 0 0;height:175px}.research-figure img{width:100%;height:150px;object-fit:contain;background:#fff;border:1px solid var(--line)}
+.research-figure figcaption,.strategy-proof figcaption{font-size:9px;margin-top:5px}
+.strategy-page .strategy-stack>div{padding:13px 0}.strategy-page .strategy-stack h3{font-size:19px}.strategy-page .strategy-stack p{font-size:11px}
+.strategy-proof{margin:16px 0 0;height:150px}.strategy-proof img{width:100%;height:126px;object-fit:contain;background:#fff;border:1px solid var(--line)}
+.prototype-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;border-top:1px solid var(--ink);padding-top:14px}
+.prototype-strip figure{margin:0;min-width:0}.prototype-strip img{display:block;width:100%;height:178px;object-fit:cover;object-position:center;background:#fff;border:1px solid var(--line)}
+.prototype-strip figcaption{font:700 9px/1.2 "Avenir Next",sans-serif;letter-spacing:.08em;color:var(--muted)}
+.filter-summary{display:flex;justify-content:space-between;align-items:center;margin-top:16px;padding:13px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.filter-summary strong{font:18px/1.3 "Songti SC",serif}.filter-summary span{font-size:9px;color:var(--muted)}
+.governance-detail{display:grid;grid-template-columns:70px 1fr;gap:12px;margin-top:24px;padding:15px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);font-size:11px}
+.governance-detail span{color:var(--muted)}
+[data-label="AI问卷·洞察"] h2{font-size:42px;margin:20px 0 24px}
+[data-label="AI问卷·洞察"] .insight-layout{max-height:185px}
+[data-label="AI问卷·洞察"] .research-figure{height:132px;margin-top:14px}
+[data-label="AI问卷·洞察"] .research-figure img{height:108px}
+
+@media(max-width:760px){
+  .book{width:min(100%,560px);height:auto;aspect-ratio:1/1.414}
+  .page{display:none}.page.active{display:block}.page.active-single{left:0;width:100%}
+  .page-edge{display:none}
+  .method-proof{width:42%;height:85px;right:28px;bottom:32px}
+  .research-figure{height:150px}.research-figure img{height:126px}
+  .strategy-proof{height:125px}.strategy-proof img{height:104px}
+  .prototype-strip{gap:7px}.prototype-strip img{height:132px}.prototype-strip figcaption{font-size:7px}
+  .filter-summary{display:block}.filter-summary strong{font-size:15px}.filter-summary span{display:block;margin-top:6px}
+}
+
+/* Definitive page-specific sizing — keep last in cascade */
+@media(min-width:761px){
+  [data-label="AI问卷·研究路径"] h2{font-size:42px;line-height:1.12;margin:18px 0 20px}
+  [data-label="AI问卷·研究路径"] .research-path span{font-size:12px}
+  [data-label="AI问卷·研究路径"] .research-path b{font-size:18px;margin:11px 0 7px}
+  [data-label="AI问卷·研究路径"] .research-path p{font-size:12px;line-height:1.5}
+  [data-label="AI问卷·研究路径"] .method-proof{position:relative;right:auto;bottom:auto;width:100%;height:292px;margin:12px 0 0;overflow:hidden;background:transparent;border:0}
+  [data-label="AI问卷·研究路径"] .method-proof img{display:block;width:100%;height:258px;margin:0;object-fit:contain;border:0;transform:none;mix-blend-mode:multiply;background:transparent}
+  [data-label="AI问卷·研究路径"] .method-proof figcaption{font-size:12px;line-height:1.45;margin-top:6px}
+  [data-label="AI问卷·研究路径"] blockquote{font-size:15px;margin-top:5px}
+
+  [data-label="AI问卷·洞察"] .research-figure{width:100%;height:250px;margin:9px 0 0;overflow:hidden;background:transparent;border:0}
+  [data-label="AI问卷·洞察"] .research-figure img{display:block;width:108%;height:220px;margin-left:-4%;object-fit:contain;border:0;transform:scale(1.06);mix-blend-mode:multiply;background:transparent}
+  [data-label="AI问卷·洞察"] .research-figure figcaption{font-size:13px;line-height:1.45;margin-top:6px}
+
+  [data-label="AI问卷·策略"] .strategy-stack>div{grid-template-columns:70px 180px 1fr;gap:18px;padding:13px 0}
+  [data-label="AI问卷·策略"] .strategy-stack h3{font-size:19px}
+  [data-label="AI问卷·策略"] .strategy-stack p{font-size:11px;line-height:1.55}
+  [data-label="AI问卷·策略"] .strategy-proof{width:100%;height:262px;margin:10px 0 0;overflow:hidden;background:transparent;border:0}
+  [data-label="AI问卷·策略"] .strategy-proof img{display:block;width:108%;height:230px;margin-left:-4%;object-fit:contain;border:0;transform:scale(1.06);mix-blend-mode:multiply;background:transparent}
+  [data-label="AI问卷·策略"] .strategy-proof figcaption{font-size:12px;line-height:1.45;margin-top:5px}
+}
+
+/* Portrait-free profile and contact compositions */
+.profile-layout{display:block;height:calc(100% - 54px);max-width:none}
+.profile-layout>div{height:100%;display:flex;flex-direction:column;justify-content:center}
+.profile h2{font-size:68px;margin:0 0 22px}
+.profile .display-line{max-width:92%;font-size:23px;line-height:1.6;margin-bottom:38px}
+.profile .capability-list{width:100%;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.profile .capability-list div{display:block;padding:18px 16px 20px 0;border-bottom:0}
+.profile .capability-list div+div{padding-left:16px;border-left:1px solid var(--line)}
+.profile .capability-list b{display:block;font-size:15px;margin-bottom:10px}
+.profile .capability-list span{display:block;font-size:11px;line-height:1.55}
+
+.end-layout{display:block;height:calc(100% - 42px)}
+.end-layout>div{height:100%;display:flex;flex-direction:column;justify-content:center}
+.end-page h2{font-size:58px;max-width:92%;margin:28px 0 36px}
+.end-page .contact-lines{display:grid;grid-template-columns:1.4fr 1fr .5fr;gap:0;width:100%;padding:17px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.end-page .contact-lines>*{padding-right:14px;font-size:12px}
+.end-page .resume-button{align-self:flex-start;margin-top:28px}
+
+@media(max-width:760px){
+  .profile h2{font-size:48px;margin-bottom:16px}
+  .profile .display-line{font-size:18px;line-height:1.5;margin-bottom:22px}
+  .profile .capability-list{display:block}
+  .profile .capability-list div{padding:9px 0}
+  .profile .capability-list div+div{padding-left:0;border-left:0;border-top:1px solid var(--line)}
+  .profile .capability-list b{font-size:12px;margin-bottom:4px}
+  .profile .capability-list span{font-size:9px}
+  .end-page h2{font-size:40px;margin:20px 0 26px}
+  .end-page .contact-lines{display:block;padding:12px 0}
+  .end-page .contact-lines>*{display:block;padding:4px 0}
+}
+
+/* Final layout overrides — intentionally last in cascade. */
+[data-label="AI问卷·问题"] .case-role{bottom:28px;max-width:calc(100% - 96px);line-height:1.55}
+
+@media(min-width:761px){
+  [data-label="AI问卷·洞察"] h2{font-size:36px;line-height:1.12;margin:16px 0}
+  [data-label="AI问卷·洞察"] .insight-layout{max-height:none}
+  [data-label="AI问卷·洞察"] .big-stat{padding:15px 16px 12px 0}
+  [data-label="AI问卷·洞察"] .big-stat strong{font-size:48px}
+  [data-label="AI问卷·洞察"] .insight-copy{padding:12px 0 5px 18px;font-size:11px;line-height:1.5}
+  [data-label="AI问卷·洞察"] .insight-copy p{margin:0 0 7px}
+  [data-label="AI问卷·洞察"] .research-figure{height:258px;margin-top:14px}
+  [data-label="AI问卷·洞察"] .research-figure img{width:100%;height:224px;margin:0;transform:none}
+
+  [data-label="AI问卷·策略"]{padding-bottom:34px}
+  [data-label="AI问卷·策略"] h2{font-size:34px;line-height:1.12;margin:15px 0 16px}
+  [data-label="AI问卷·策略"] .strategy-stack{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--ink);border-bottom:1px solid var(--line)}
+  [data-label="AI问卷·策略"] .strategy-stack>div{display:block;min-width:0;padding:11px 12px 12px 0;border-bottom:0}
+  [data-label="AI问卷·策略"] .strategy-stack>div+div{padding-left:12px;border-left:1px solid var(--line)}
+  [data-label="AI问卷·策略"] .strategy-stack span{display:block;margin-bottom:8px}
+  [data-label="AI问卷·策略"] .strategy-stack h3{font-size:16px;line-height:1.25;margin-bottom:6px}
+  [data-label="AI问卷·策略"] .strategy-stack p{font-size:9px;line-height:1.45}
+  [data-label="AI问卷·策略"] .strategy-proof{height:300px;margin:12px 0 0}
+  [data-label="AI问卷·策略"] .strategy-proof img{display:block;width:100%;height:268px;margin:0;object-fit:contain;object-position:center;transform:none;border:0;background:transparent}
+  [data-label="AI问卷·策略"] .strategy-proof figcaption{font-size:11px;line-height:1.4;margin-top:5px}
+}
+
+@media(max-width:760px){
+  [data-label="AI问卷·问题"] .case-role{left:28px;bottom:25px;max-width:calc(100% - 76px);font-size:10px}
+  [data-label="AI问卷·洞察"] h2{font-size:26px;margin-bottom:10px}
+  [data-label="AI问卷·策略"] .strategy-proof img{width:100%;margin:0;transform:none;object-fit:contain}
+}
